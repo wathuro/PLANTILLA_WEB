@@ -1,6 +1,4 @@
-body {
-    color: teal;
-    text-align: center;
-}
-
-
+h1,
+p {
+  color: teal;
+  text-align: center; }
