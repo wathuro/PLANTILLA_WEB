@@ -1,0 +1,41 @@
+// Variables, functions, mixins y maps
+
+// Fonts
+$main-font: 'Open Sans', sans-serif; 
+$light: 300;
+$normal: 400;
+$bold: 700;
+
+// Colors
+$colors: (
+    white: #ffffff,
+    black: #000000,
+    teal: #008080 
+);
+  
+@function color($color){
+    @return map-get($colors,$color);
+}
+
+// Z-index variables
+$z-index: (
+  tooltip: 100,
+  modal: 500,
+  overlay: 700,
+  offcanvas: 1000,
+);
+
+@function z-index($val){
+  @return map-get($z-index,$val);
+}
+
+// Convert px to rem
+@function rem($el){
+    @return ($el / 16px) * 1rem;
+  }
+
+// Function for path images
+@function img($img){
+  @return url('../img/#{$img}');
+}
+

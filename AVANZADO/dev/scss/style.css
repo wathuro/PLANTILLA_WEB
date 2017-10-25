@@ -1,4 +1,7 @@
+body {
+  font-family: "Open Sans", sans-serif; }
+
 h1,
 p {
-  color: teal;
+  color: #008080;
   text-align: center; }

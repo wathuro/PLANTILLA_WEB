@@ -18,7 +18,7 @@ gulp.task('scss-to-css', function() {
 gulp.task('minify-css', function() {
     return gulp.src('./dev/scss/*.css')
     .pipe(cleanCSS())
-    .pipe(gulp.dest('./dist/css/'));
+    .pipe(gulp.dest('./dist/assets/css/'));
 });
 
 // Tarea: Compilar pug a html
@@ -33,7 +33,7 @@ gulp.task('minify-js', function(cb) {
     pump([
         gulp.src('./dev/js/*.js'),
         uglifyJS(),
-        gulp.dest('./dist/js/')],
+        gulp.dest('./dist/assets/js/')],
     cb
     );
 });
@@ -49,7 +49,7 @@ gulp.task('browser-sync', function() {
 
 // Tarea: Verificar cambios en el archivo *.scss, *.pug, *.js
 gulp.task('watch', function() {
-    gulp.watch('./dev/scss/*.scss', ['scss-to-css']);
+    gulp.watch('./dev/scss/**/*.scss', ['scss-to-css']);
     gulp.watch('./dev/scss/*.css', ['minify-css']);
     gulp.watch('./dev/pug/**/*.pug', ['pug-to-html']);
     gulp.watch('./dev/js/*.js', ['minify-js']);

@@ -1,5 +1,18 @@
-h1,
-p {
-    color: teal;
-    text-align: center;
-}
+// Import all proyect components 
+ 
+// Config
+@import "config/config";
+@import "config/base";
+
+// Modules
+@import "modules/button";
+@import "modules/menu";
+
+// Components
+@import "components/login";
+@import "components/user-profile";
+
+
+
+
+
